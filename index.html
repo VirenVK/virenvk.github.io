@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Viren Modi | Senior PHP Laravel & CodeIgniter Developer</title>
+<title>Viren Modi | Senior Laravel / PHP Backend Developer</title>
+<meta name="description" content="Viren Modi - Senior Laravel / PHP backend developer with 8+ years building REST APIs, admin platforms and backends for mobile apps. AI-assisted development with Claude Code and Cursor.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
@@ -550,6 +551,33 @@ section { padding: 100px 0; }
 
 .exp-tags { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px; }
 
+.exp-card ul,
+.project-body ul {
+  list-style: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.exp-card ul li,
+.project-body ul li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 6px;
+}
+
+.exp-card ul li::before,
+.project-body ul li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
 /* ===== PROJECTS ===== */
 .projects-grid {
   display: grid;
@@ -597,6 +625,47 @@ section { padding: 100px 0; }
 
 .project-body h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
 .project-body p { color: var(--text-muted); font-size: 14px; line-height: 1.7; margin-bottom: 20px; }
+
+.project-meta {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+  margin: -4px 0 14px;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.project-link:hover { color: var(--accent); }
+
+/* Featured (full-width) project cards */
+.project-card.featured { grid-column: 1 / -1; }
+
+.featured-cols {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 32px;
+}
+
+.featured-cols h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.featured-cols h4 i { color: var(--primary); margin-right: 6px; }
 
 /* ===== CONTACT ===== */
 .contact-grid {
@@ -741,6 +810,7 @@ footer {
   .hero h1 { font-size: 42px; }
   .contact-grid { grid-template-columns: 1fr; }
   .skills-grid, .projects-grid { grid-template-columns: 1fr; }
+  .featured-cols { grid-template-columns: 1fr; gap: 20px; }
   .hero-stats { gap: 24px; }
   .form-row { grid-template-columns: 1fr; }
 }
@@ -785,8 +855,8 @@ footer {
   <div class="nav-links" id="navLinks">
     <a href="#about">Expertise</a>
     <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
     <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
     <a href="#contact">Contact</a>
   </div>
   <div class="hamburger" onclick="toggleMenu()">
@@ -807,11 +877,11 @@ footer {
     </div>
     <h1>Viren <span class="gradient-text">Modi</span></h1>
     <p class="hero-subtitle">
-      Senior PHP Laravel &amp; CodeIgniter Developer. Experienced in building scalable backend platforms, REST APIs, real-time systems &amp; enterprise applications. MCA graduate from CHARUSAT University.
+      Senior Laravel / PHP Backend Developer &middot; AI-Assisted Development. Building REST APIs, admin platforms and backends for mobile apps in fitness, IoT / surveillance and e-commerce. Currently leading a CodeIgniter 3 to Laravel 12 migration of a live mobile platform.
     </p>
     <div class="hero-stats">
       <div class="hero-stat">
-        <h3><span class="counter" data-target="7">0</span>+</h3>
+        <h3><span class="counter" data-target="8">0</span>+</h3>
         <p>Years Experience</p>
       </div>
       <div class="hero-stat">
@@ -847,40 +917,42 @@ footer {
 <!-- TECH MARQUEE -->
 <div class="tech-marquee">
 <div class="tech-track">
-  <div class="tech-item"><i class="fa-brands fa-php"></i> PHP</div>
-  <div class="tech-item"><i class="fa-brands fa-laravel"></i> Laravel</div>
+  <div class="tech-item"><i class="fa-brands fa-php"></i> PHP 8</div>
+  <div class="tech-item"><i class="fa-brands fa-laravel"></i> Laravel 12</div>
   <div class="tech-item"><i class="fa-solid fa-fire"></i> CodeIgniter</div>
-  <div class="tech-item"><i class="fa-brands fa-js"></i> JavaScript</div>
   <div class="tech-item"><i class="fa-solid fa-database"></i> MySQL</div>
-  <div class="tech-item"><i class="fa-solid fa-bolt"></i> Redis</div>
-  <div class="tech-item"><i class="fa-brands fa-docker"></i> Docker</div>
+  <div class="tech-item"><i class="fa-solid fa-database"></i> PostgreSQL</div>
   <div class="tech-item"><i class="fa-solid fa-tower-broadcast"></i> REST APIs</div>
+  <div class="tech-item"><i class="fa-solid fa-shield-halved"></i> JWT Auth</div>
+  <div class="tech-item"><i class="fa-solid fa-fire-flame-curved"></i> Firebase</div>
   <div class="tech-item"><i class="fa-solid fa-plug"></i> WebSockets</div>
   <div class="tech-item"><i class="fa-solid fa-satellite-dish"></i> MQTT</div>
-  <div class="tech-item"><i class="fa-brands fa-git-alt"></i> Git</div>
+  <div class="tech-item"><i class="fa-solid fa-vial-circle-check"></i> PHPUnit</div>
+  <div class="tech-item"><i class="fa-brands fa-github"></i> GitHub Actions</div>
   <div class="tech-item"><i class="fa-brands fa-aws"></i> AWS</div>
-  <div class="tech-item"><i class="fa-solid fa-shield-halved"></i> JWT Auth</div>
-  <div class="tech-item"><i class="fa-solid fa-credit-card"></i> Stripe</div>
-  <div class="tech-item"><i class="fa-solid fa-robot"></i> Claude AI</div>
+  <div class="tech-item"><i class="fa-brands fa-linux"></i> Linux</div>
+  <div class="tech-item"><i class="fa-solid fa-robot"></i> Claude Code</div>
   <div class="tech-item"><i class="fa-solid fa-wand-magic-sparkles"></i> Cursor</div>
   <div class="tech-item"><i class="fa-solid fa-brain"></i> ChatGPT</div>
-  <div class="tech-item"><i class="fa-brands fa-php"></i> PHP</div>
-  <div class="tech-item"><i class="fa-brands fa-laravel"></i> Laravel</div>
+  <div class="tech-item"><i class="fa-brands fa-github"></i> GitHub Copilot</div>
+  <div class="tech-item"><i class="fa-brands fa-php"></i> PHP 8</div>
+  <div class="tech-item"><i class="fa-brands fa-laravel"></i> Laravel 12</div>
   <div class="tech-item"><i class="fa-solid fa-fire"></i> CodeIgniter</div>
-  <div class="tech-item"><i class="fa-brands fa-js"></i> JavaScript</div>
   <div class="tech-item"><i class="fa-solid fa-database"></i> MySQL</div>
-  <div class="tech-item"><i class="fa-solid fa-bolt"></i> Redis</div>
-  <div class="tech-item"><i class="fa-brands fa-docker"></i> Docker</div>
+  <div class="tech-item"><i class="fa-solid fa-database"></i> PostgreSQL</div>
   <div class="tech-item"><i class="fa-solid fa-tower-broadcast"></i> REST APIs</div>
+  <div class="tech-item"><i class="fa-solid fa-shield-halved"></i> JWT Auth</div>
+  <div class="tech-item"><i class="fa-solid fa-fire-flame-curved"></i> Firebase</div>
   <div class="tech-item"><i class="fa-solid fa-plug"></i> WebSockets</div>
   <div class="tech-item"><i class="fa-solid fa-satellite-dish"></i> MQTT</div>
-  <div class="tech-item"><i class="fa-brands fa-git-alt"></i> Git</div>
+  <div class="tech-item"><i class="fa-solid fa-vial-circle-check"></i> PHPUnit</div>
+  <div class="tech-item"><i class="fa-brands fa-github"></i> GitHub Actions</div>
   <div class="tech-item"><i class="fa-brands fa-aws"></i> AWS</div>
-  <div class="tech-item"><i class="fa-solid fa-shield-halved"></i> JWT Auth</div>
-  <div class="tech-item"><i class="fa-solid fa-credit-card"></i> Stripe</div>
-  <div class="tech-item"><i class="fa-solid fa-robot"></i> Claude AI</div>
+  <div class="tech-item"><i class="fa-brands fa-linux"></i> Linux</div>
+  <div class="tech-item"><i class="fa-solid fa-robot"></i> Claude Code</div>
   <div class="tech-item"><i class="fa-solid fa-wand-magic-sparkles"></i> Cursor</div>
   <div class="tech-item"><i class="fa-solid fa-brain"></i> ChatGPT</div>
+  <div class="tech-item"><i class="fa-brands fa-github"></i> GitHub Copilot</div>
 </div>
 </div>
 
@@ -891,51 +963,51 @@ footer {
 <div class="section-header reveal">
   <span class="section-label">What I Do</span>
   <h2 class="section-title">Core Expertise</h2>
-  <p class="section-desc">Specialized in building robust, scalable backend systems that power modern web &amp; mobile applications.</p>
+  <p class="section-desc">Backend systems, REST APIs and admin platforms that power web and mobile apps, delivered with a reviewed, test-backed AI workflow.</p>
 </div>
 
 <div class="skills-grid">
 
   <div class="skill-card reveal" data-tilt data-tilt-max="6" data-tilt-speed="400">
     <div class="skill-icon" style="background:rgba(108,99,255,0.1);color:var(--primary)"><i class="fa-solid fa-server"></i></div>
-    <h3>Laravel Backend Architecture</h3>
-    <p>Building complex, maintainable backend systems using Laravel's elegant architecture with service patterns, repositories, and event-driven design.</p>
-    <div class="skill-tags"><span class="skill-tag">Laravel</span><span class="skill-tag">PHP 8+</span><span class="skill-tag">Eloquent ORM</span><span class="skill-tag">Queues</span></div>
+    <h3>Laravel Backend &amp; Databases</h3>
+    <p>Designing Laravel backends and admin platforms end to end: database design, Eloquent models, versioned migrations, query optimisation and Linux server deployment.</p>
+    <div class="skill-tags"><span class="skill-tag">Laravel 12</span><span class="skill-tag">PHP 8.x</span><span class="skill-tag">Eloquent ORM</span><span class="skill-tag">MySQL</span><span class="skill-tag">PostgreSQL</span></div>
   </div>
 
   <div class="skill-card reveal" data-tilt data-tilt-max="6" data-tilt-speed="400">
     <div class="skill-icon" style="background:rgba(0,212,170,0.1);color:var(--accent)"><i class="fa-solid fa-code"></i></div>
-    <h3>High Performance REST APIs</h3>
-    <p>Designing and developing RESTful APIs that handle thousands of requests per second with caching, pagination, and rate limiting.</p>
-    <div class="skill-tags"><span class="skill-tag">REST</span><span class="skill-tag">API Versioning</span><span class="skill-tag">Swagger</span></div>
+    <h3>REST APIs for Mobile Apps</h3>
+    <p>Building REST APIs that serve iOS and Android apps, with JWT authentication, role-based access control and Firebase integration.</p>
+    <div class="skill-tags"><span class="skill-tag">REST APIs</span><span class="skill-tag">JWT</span><span class="skill-tag">RBAC</span><span class="skill-tag">Firebase</span></div>
   </div>
 
   <div class="skill-card reveal" data-tilt data-tilt-max="6" data-tilt-speed="400">
-    <div class="skill-icon" style="background:rgba(255,107,107,0.1);color:var(--accent2)"><i class="fa-solid fa-tower-broadcast"></i></div>
-    <h3>Real-time Systems</h3>
-    <p>Implementing WebSockets, MQTT, and push notifications for real-time dashboards, IoT monitoring, and live data streaming.</p>
-    <div class="skill-tags"><span class="skill-tag">WebSockets</span><span class="skill-tag">MQTT</span><span class="skill-tag">Pusher</span><span class="skill-tag">Socket.IO</span></div>
+    <div class="skill-icon" style="background:rgba(255,107,107,0.1);color:var(--accent2)"><i class="fa-solid fa-arrows-rotate"></i></div>
+    <h3>Legacy Migration to Laravel</h3>
+    <p>Moving end-of-life CodeIgniter 3 systems to Laravel 12 with full feature parity and a 1:1 API contract, so installed apps keep working without a forced update.</p>
+    <div class="skill-tags"><span class="skill-tag">CodeIgniter 3</span><span class="skill-tag">Laravel 12</span><span class="skill-tag">PHPUnit</span><span class="skill-tag">GitHub Actions</span></div>
   </div>
 
   <div class="skill-card reveal" data-tilt data-tilt-max="6" data-tilt-speed="400">
-    <div class="skill-icon" style="background:rgba(108,99,255,0.1);color:var(--primary)"><i class="fa-solid fa-credit-card"></i></div>
-    <h3>Payment Gateway Integrations</h3>
-    <p>Integrating Stripe, Razorpay, and custom payment flows with split payments, subscriptions, and automated commission distribution.</p>
-    <div class="skill-tags"><span class="skill-tag">Stripe</span><span class="skill-tag">Razorpay</span><span class="skill-tag">Webhooks</span></div>
+    <div class="skill-icon" style="background:rgba(108,99,255,0.1);color:var(--primary)"><i class="fa-solid fa-tower-broadcast"></i></div>
+    <h3>Real-time &amp; IoT Systems</h3>
+    <p>Device communication over MQTT, real-time updates over WebSockets, and online / offline alerts sent by SMS, push, in-app message and email.</p>
+    <div class="skill-tags"><span class="skill-tag">WebSockets</span><span class="skill-tag">Laravel Reverb</span><span class="skill-tag">Soketi</span><span class="skill-tag">MQTT</span></div>
   </div>
 
   <div class="skill-card reveal" data-tilt data-tilt-max="6" data-tilt-speed="400">
-    <div class="skill-icon" style="background:rgba(0,212,170,0.1);color:var(--accent)"><i class="fa-solid fa-lock"></i></div>
-    <h3>Authentication &amp; Security</h3>
-    <p>Implementing secure authentication systems using JWT, OAuth2, and multi-factor authentication with RBAC authorization.</p>
-    <div class="skill-tags"><span class="skill-tag">JWT</span><span class="skill-tag">OAuth2</span><span class="skill-tag">Laravel Sanctum</span></div>
+    <div class="skill-icon" style="background:rgba(0,212,170,0.1);color:var(--accent)"><i class="fa-solid fa-credit-card"></i></div>
+    <h3>Payments &amp; Subscriptions</h3>
+    <p>Payment gateway integration for e-commerce, printing and booking apps, plus Google Play and App Store subscription reconciliation through server notifications.</p>
+    <div class="skill-tags"><span class="skill-tag">Payment Gateways</span><span class="skill-tag">Google Play Billing</span><span class="skill-tag">App Store</span><span class="skill-tag">Webhooks</span></div>
   </div>
 
   <div class="skill-card reveal" data-tilt data-tilt-max="6" data-tilt-speed="400">
-    <div class="skill-icon" style="background:rgba(255,107,107,0.1);color:var(--accent2)"><i class="fa-solid fa-gauge-high"></i></div>
-    <h3>Database Optimization</h3>
-    <p>Optimizing MySQL queries, designing efficient schemas, implementing caching strategies with Redis for maximum performance.</p>
-    <div class="skill-tags"><span class="skill-tag">MySQL</span><span class="skill-tag">Redis</span><span class="skill-tag">Query Optimization</span><span class="skill-tag">Indexing</span></div>
+    <div class="skill-icon" style="background:rgba(255,107,107,0.1);color:var(--accent2)"><i class="fa-solid fa-robot"></i></div>
+    <h3>AI-Assisted Development</h3>
+    <p>Daily delivery with Claude Code and Cursor inside a reviewed, test-backed workflow: project rules in CLAUDE.md, custom skills, subagents and MCP server integrations.</p>
+    <div class="skill-tags"><span class="skill-tag">Claude Code</span><span class="skill-tag">Cursor</span><span class="skill-tag">ChatGPT</span><span class="skill-tag">GitHub Copilot</span></div>
   </div>
 
 </div>
@@ -950,7 +1022,7 @@ footer {
 <div class="section-header reveal">
   <span class="section-label">Career Path</span>
   <h2 class="section-title">Professional Experience</h2>
-  <p class="section-desc">A journey of continuous growth in backend development and system architecture.</p>
+  <p class="section-desc">Nearly a decade of backend development, from PHP web apps to Laravel platforms serving mobile apps.</p>
 </div>
 
 <div class="exp-timeline">
@@ -958,12 +1030,17 @@ footer {
   <div class="exp-item">
     <div class="exp-dot"></div>
     <div class="exp-card">
-      <div class="exp-date">June 2023 &mdash; Present</div>
-      <h3>Senior PHP Laravel &amp; CodeIgniter Developer</h3>
-      <div class="exp-company"><i class="fa-solid fa-building"></i> 360 Degree Technosoft Pvt Ltd &bull; Ahmedabad, Gujarat</div>
-      <p>Leading backend architecture for enterprise-scale applications. Building scalable Laravel &amp; CodeIgniter systems, high-performance REST APIs, and real-time dashboards. Mentoring junior developers and establishing coding standards across the team.</p>
+      <div class="exp-date">June 2020 &mdash; Present</div>
+      <h3>Senior Web Developer</h3>
+      <div class="exp-company"><i class="fa-solid fa-building"></i> 360 Degree Technosoft Pvt. Ltd. &bull; Ahmedabad, Gujarat</div>
+      <ul>
+        <li>Backend lead for 6+ client platforms (fitness, surveillance / IoT, grocery e-commerce, custom printing, digital memorials), each serving iOS and Android apps through REST APIs.</li>
+        <li>Own API design, database design, payment gateway integration and Linux server deployment end to end.</li>
+        <li>Leading the CodeIgniter 3 to Laravel 12 migration of Xrundan as main developer.</li>
+        <li>Brought AI coding tools (Claude Code, Cursor, ChatGPT) into daily delivery, with project rules, code review and CI tests as guardrails.</li>
+      </ul>
       <div class="exp-tags">
-        <span class="skill-tag">Laravel</span><span class="skill-tag">CodeIgniter</span><span class="skill-tag">REST APIs</span><span class="skill-tag">MySQL</span><span class="skill-tag">Leadership</span>
+        <span class="skill-tag">Laravel</span><span class="skill-tag">CodeIgniter</span><span class="skill-tag">REST APIs</span><span class="skill-tag">MySQL</span><span class="skill-tag">Claude Code</span>
       </div>
     </div>
   </div>
@@ -971,21 +1048,8 @@ footer {
   <div class="exp-item">
     <div class="exp-dot"></div>
     <div class="exp-card">
-      <div class="exp-date">June 2020 &mdash; May 2023</div>
-      <h3>PHP CodeIgniter &amp; Laravel Developer</h3>
-      <div class="exp-company"><i class="fa-solid fa-building"></i> 360 Degree Technosoft Pvt Ltd &bull; Ahmedabad, Gujarat</div>
-      <p>Designed and developed high-performance REST APIs powering web and mobile applications. Implemented payment gateway integrations, push notification systems, and automated background job processing using Laravel and CodeIgniter.</p>
-      <div class="exp-tags">
-        <span class="skill-tag">PHP</span><span class="skill-tag">Laravel</span><span class="skill-tag">CodeIgniter</span><span class="skill-tag">API Design</span><span class="skill-tag">Stripe</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="exp-item">
-    <div class="exp-dot"></div>
-    <div class="exp-card">
-      <div class="exp-date">June 2018 &mdash; June 2020</div>
-      <h3>PHP CodeIgniter Developer</h3>
+      <div class="exp-date">June 2018 &mdash; May 2020</div>
+      <h3>Web Developer</h3>
       <div class="exp-company"><i class="fa-solid fa-building"></i> Phoenix Binary System Pvt. Ltd. &bull; Surat, India</div>
       <p>Developed enterprise web applications, e-commerce platforms, and backend systems. Built custom admin panels, reporting dashboards, and API integrations using PHP and CodeIgniter framework.</p>
       <div class="exp-tags">
@@ -998,12 +1062,159 @@ footer {
     <div class="exp-dot"></div>
     <div class="exp-card">
       <div class="exp-date">December 2017 &mdash; May 2018</div>
-      <h3>PHP Developer</h3>
-      <div class="exp-company"><i class="fa-solid fa-building"></i> Neeasoft IT Services Pvt. Ltd &bull; Surat, India</div>
+      <h3>Web Developer</h3>
+      <div class="exp-company"><i class="fa-solid fa-building"></i> Neeasoft IT Services Pvt. Ltd. &bull; Surat, India</div>
       <p>Started professional career building web applications and backend services. Gained hands-on experience with PHP development, database design, and front-end integration.</p>
       <div class="exp-tags">
         <span class="skill-tag">PHP</span><span class="skill-tag">MySQL</span><span class="skill-tag">HTML/CSS</span><span class="skill-tag">JavaScript</span>
       </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<div class="container">
+
+<div class="section-header reveal">
+  <span class="section-label">My Work</span>
+  <h2 class="section-title">Featured Projects</h2>
+  <p class="section-desc">Live platforms I have built and maintain, from fitness and surveillance to e-commerce.</p>
+</div>
+
+<div class="projects-grid">
+
+  <div class="project-card featured reveal">
+    <div class="project-gradient"></div>
+    <div class="project-body">
+      <div class="project-icon"><i class="fa-solid fa-person-walking"></i></div>
+      <h3>Xrundan &mdash; Walking Quiz Fitness Platform</h3>
+      <div class="project-meta">Senior Backend Developer &bull; 2020 &ndash; Present &bull; CodeIgniter 3 to Laravel 12 migration since May 2026</div>
+      <p>Gamified walking quiz app for iOS and Android. I built and ran the original CodeIgniter backend from 2020 and am now moving the platform to Laravel 12 while the live apps keep running.</p>
+      <div class="featured-cols">
+        <div>
+          <h4><i class="fa-solid fa-list-check"></i>Key contributions</h4>
+          <ul>
+            <li>Migrating from end-of-life CodeIgniter 3 to Laravel 12 / PHP 8.2 with full feature parity; the mobile API is copied 1:1, so installed apps need no forced update.</li>
+            <li>Rebuilt a legacy database that had no migrations as versioned Laravel migrations and Eloquent models.</li>
+            <li>Moved users from unsalted MD5 passwords to bcrypt without forced resets.</li>
+            <li>Built Google Play (RTDN) and Apple App Store (ASSN) subscription reconciliation.</li>
+            <li>Ported the admin panel and reports: PDF reports, Excel exports, QR codes, JWT auth and Firebase integration.</li>
+            <li>Set up GitHub Actions CI running a PHPUnit suite on every PR; staging deployed on AWS.</li>
+          </ul>
+        </div>
+        <div>
+          <h4><i class="fa-solid fa-robot"></i>AI-assisted development</h4>
+          <ul>
+            <li>Wrote a project CLAUDE.md that sets the rules for AI-generated code: 1:1 API contract, Eloquent only, no destructive migrations.</li>
+            <li>Used Claude Code to read legacy CodeIgniter code and draft matching Laravel controllers, FormRequests, models and Blade views; every change reviewed and tested before merge.</li>
+            <li>Connected Claude Code to MCP servers (Laravel Boost, Postman) to check new endpoints against legacy request / response shapes.</li>
+            <li>Added a custom Laravel best-practices skill so generated code follows one standard.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">PHP 8.2</span><span class="skill-tag">Laravel 12</span><span class="skill-tag">MySQL</span><span class="skill-tag">JWT</span><span class="skill-tag">Firebase</span><span class="skill-tag">PHPUnit</span><span class="skill-tag">AWS</span><span class="skill-tag">Claude Code</span><span class="skill-tag">Cursor</span>
+      </div>
+      <a class="project-link" href="https://www.xrundan.com/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> xrundan.com</a>
+    </div>
+  </div>
+
+  <div class="project-card featured reveal">
+    <div class="project-gradient"></div>
+    <div class="project-body">
+      <div class="project-icon" style="background:rgba(0,212,170,0.1);color:var(--accent)"><i class="fa-solid fa-video"></i></div>
+      <h3>Modernext &mdash; Smart Surveillance &amp; Remote Site Monitoring</h3>
+      <div class="project-meta">Senior Backend Developer &bull; 2025 &ndash; Present</div>
+      <p>Platform for monitoring security sites, edge devices and workstations, managed from mobile apps and an admin dashboard.</p>
+      <div class="featured-cols">
+        <div>
+          <h4><i class="fa-solid fa-list-check"></i>Key contributions</h4>
+          <ul>
+            <li>Designed the Laravel backend and REST APIs for the mobile apps and admin dashboard that manage sites, edge devices, workstations and users.</li>
+            <li>Built device communication over MQTT and WireGuard VPN, with automatic peer discovery and one-click device registration.</li>
+            <li>Built online / offline alerts sent by SMS (India DLT-compliant templates), push notification, in-app message and email.</li>
+            <li>Built role-based access control per module and sub-module, with full activity and audit logs.</li>
+            <li>Hardened security with a security-headers middleware (CSP, X-Frame-Options, Referrer-Policy).</li>
+          </ul>
+        </div>
+        <div>
+          <h4><i class="fa-solid fa-robot"></i>AI-assisted development</h4>
+          <ul>
+            <li>Used Claude Code to deliver whole modules end to end (migration, seeder, model, controller, views, routes and permissions), following the project's existing patterns.</li>
+            <li>Found and fixed production issues with AI-assisted debugging, from rejected SMS sends to a MySQL DDL transaction failure.</li>
+            <li>Kept a knowledge base of production lessons in Claude Code's persistent memory, so the same bugs don't come back.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">PHP</span><span class="skill-tag">Laravel</span><span class="skill-tag">MySQL</span><span class="skill-tag">MQTT</span><span class="skill-tag">WireGuard</span><span class="skill-tag">REST APIs</span><span class="skill-tag">Claude Code</span><span class="skill-tag">Cursor</span>
+      </div>
+      <a class="project-link" href="https://modernext.in/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> modernext.in</a>
+    </div>
+  </div>
+
+  <div class="project-card reveal" data-tilt data-tilt-max="5" data-tilt-speed="400">
+    <div class="project-gradient"></div>
+    <div class="project-body">
+      <div class="project-icon" style="background:rgba(255,107,107,0.1);color:var(--accent2)"><i class="fa-solid fa-store"></i></div>
+      <h3>Business Listing Portal</h3>
+      <div class="project-meta">Laravel &bull; 2024 &ndash; 2025</div>
+      <p>Business profiles, category and location search, admin moderation and payments; optimised search queries for faster listing retrieval.</p>
+      <div class="skill-tags"><span class="skill-tag">Laravel</span><span class="skill-tag">MySQL</span><span class="skill-tag">REST APIs</span><span class="skill-tag">Payments</span></div>
+      <a class="project-link" href="https://hotelmotelsuppliers.com/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> hotelmotelsuppliers.com</a>
+    </div>
+  </div>
+
+  <div class="project-card reveal" data-tilt data-tilt-max="5" data-tilt-speed="400">
+    <div class="project-gradient"></div>
+    <div class="project-body">
+      <div class="project-icon" style="background:rgba(255,217,61,0.1);color:#FFD93D"><i class="fa-solid fa-basket-shopping"></i></div>
+      <h3>Urban India</h3>
+      <div class="project-meta">Laravel &bull; 2024 &ndash; 2025</div>
+      <p>Grocery e-commerce in Canada: APIs for catalogue, cart and checkout, order tracking, franchise operations, promotions and payments.</p>
+      <div class="skill-tags"><span class="skill-tag">Laravel</span><span class="skill-tag">E-commerce</span><span class="skill-tag">REST APIs</span><span class="skill-tag">Payments</span></div>
+      <a class="project-link" href="https://www.urbanindia.ca/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> urbanindia.ca</a>
+    </div>
+  </div>
+
+  <div class="project-card reveal" data-tilt data-tilt-max="5" data-tilt-speed="400">
+    <div class="project-gradient"></div>
+    <div class="project-body">
+      <div class="project-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+      <h3>Deltio</h3>
+      <div class="project-meta">Laravel &bull; 2022 &ndash; 2025</div>
+      <p>Custom postcard app: template customisation, order and payment APIs, admin panel for templates and orders.</p>
+      <div class="skill-tags"><span class="skill-tag">Laravel</span><span class="skill-tag">REST APIs</span><span class="skill-tag">Payments</span></div>
+      <a class="project-link" href="https://deltio.app/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> deltio.app</a>
+    </div>
+  </div>
+
+  <div class="project-card reveal" data-tilt data-tilt-max="5" data-tilt-speed="400">
+    <div class="project-gradient"></div>
+    <div class="project-body">
+      <div class="project-icon" style="background:rgba(0,212,170,0.1);color:var(--accent)"><i class="fa-solid fa-tree"></i></div>
+      <h3>Tree of Memories</h3>
+      <div class="project-meta">CodeIgniter &bull; 2020 &ndash; 2023</div>
+      <p>Digital memorial app: backend architecture, memory and tribute APIs, photo, video and story sharing.</p>
+      <div class="skill-tags"><span class="skill-tag">CodeIgniter</span><span class="skill-tag">MySQL</span><span class="skill-tag">REST APIs</span></div>
+      <a class="project-link" href="https://treeofmemories.com/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> treeofmemories.com</a>
+    </div>
+  </div>
+
+  <div class="project-card reveal" data-tilt data-tilt-max="5" data-tilt-speed="400">
+    <div class="project-gradient"></div>
+    <div class="project-body">
+      <div class="project-icon" style="background:rgba(255,107,107,0.1);color:var(--accent2)"><i class="fa-solid fa-car"></i></div>
+      <h3>UWay Car Rental</h3>
+      <div class="project-meta">CodeIgniter</div>
+      <p>Car booking app: availability, reservation workflow, payments and fleet admin panel.</p>
+      <div class="skill-tags"><span class="skill-tag">CodeIgniter</span><span class="skill-tag">MySQL</span><span class="skill-tag">Payments</span></div>
+      <a class="project-link" href="https://uwaycarrental.com/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> uwaycarrental.com</a>
     </div>
   </div>
 
@@ -1034,73 +1245,8 @@ footer {
   <div class="skill-card reveal" data-tilt data-tilt-max="5" data-tilt-speed="400">
     <div class="skill-icon" style="background:rgba(0,212,170,0.1);color:var(--accent)"><i class="fa-solid fa-user-graduate"></i></div>
     <h3>Bachelor of Computer Application (BCA)</h3>
-    <p>Shri Manilal Kadakia College of Management &amp; Computer Studies. Built foundational knowledge in programming and software development.</p>
-    <div class="skill-tags"><span class="skill-tag">2013 - 2015</span><span class="skill-tag">Computer Science</span></div>
-  </div>
-
-</div>
-
-</div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-<div class="container">
-
-<div class="section-header reveal">
-  <span class="section-label">My Work</span>
-  <h2 class="section-title">Featured Projects</h2>
-  <p class="section-desc">A selection of projects that showcase my expertise in backend development and system design.</p>
-</div>
-
-<div class="projects-grid">
-
-  <div class="project-card reveal" data-tilt data-tilt-max="5" data-tilt-speed="400">
-    <div class="project-gradient"></div>
-    <div class="project-body">
-      <div class="project-icon"><i class="fa-solid fa-users"></i></div>
-      <h3>Enterprise CRM Platform</h3>
-      <p>Full-featured contact management system with custom fields, contact merging, activity tracking, email integration, and automated workflow triggers.</p>
-      <div class="skill-tags">
-        <span class="skill-tag">Laravel</span><span class="skill-tag">MySQL</span><span class="skill-tag">Redis</span><span class="skill-tag">Cache</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="project-card reveal" data-tilt data-tilt-max="5" data-tilt-speed="400">
-    <div class="project-gradient"></div>
-    <div class="project-body">
-      <div class="project-icon" style="background:rgba(0,212,170,0.1);color:var(--accent)"><i class="fa-solid fa-chart-line"></i></div>
-      <h3>Real-time IoT Dashboard</h3>
-      <p>Laravel + MQTT based monitoring dashboard for IoT devices with live data visualization, alerts, device management, and historical analytics.</p>
-      <div class="skill-tags">
-        <span class="skill-tag">Laravel</span><span class="skill-tag">MQTT</span><span class="skill-tag">WebSockets</span><span class="skill-tag">Chart.js</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="project-card reveal" data-tilt data-tilt-max="5" data-tilt-speed="400">
-    <div class="project-gradient"></div>
-    <div class="project-body">
-      <div class="project-icon" style="background:rgba(255,107,107,0.1);color:var(--accent2)"><i class="fa-solid fa-money-bill-transfer"></i></div>
-      <h3>Stripe Payment System</h3>
-      <p>Advanced payment platform with split payments, automated commission distribution, subscription management, invoicing, and refund handling.</p>
-      <div class="skill-tags">
-        <span class="skill-tag">Stripe API</span><span class="skill-tag">Webhooks</span><span class="skill-tag">Laravel</span><span class="skill-tag">Queues</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="project-card reveal" data-tilt data-tilt-max="5" data-tilt-speed="400">
-    <div class="project-gradient"></div>
-    <div class="project-body">
-      <div class="project-icon" style="background:rgba(255,217,61,0.1);color:#FFD93D"><i class="fa-solid fa-network-wired"></i></div>
-      <h3>Network Scanner</h3>
-      <p>Router API-based network monitoring system with automated device discovery, bandwidth tracking, uptime monitoring, and alert notifications.</p>
-      <div class="skill-tags">
-        <span class="skill-tag">PHP</span><span class="skill-tag">API Integration</span><span class="skill-tag">SNMP</span><span class="skill-tag">Cron Jobs</span>
-      </div>
-    </div>
+    <p>Shri Manilal Kadakia College of Management &amp; Computer Studies, Veer Narmad South Gujarat University, Surat. Built foundational knowledge in programming and software development.</p>
+    <div class="skill-tags"><span class="skill-tag">2013 - 2016</span><span class="skill-tag">Computer Science</span><span class="skill-tag">VNSGU</span></div>
   </div>
 
 </div>
@@ -1207,7 +1353,7 @@ footer {
 <footer>
   <div class="container">
     <p style="margin-bottom:8px">Designed &amp; Developed by <strong style="color:var(--primary)">Viren Modi</strong></p>
-    <p>&copy; 2026 &bull; Senior PHP &amp; Laravel Developer</p>
+    <p>&copy; 2026 &bull; Senior Laravel / PHP Backend Developer</p>
   </div>
 </footer>
 
@@ -1220,10 +1366,11 @@ const terminalLines = [
   { plain: '', html: '' },
   { plain: 'const developer = {', html: '<span class="keyword">const</span> <span class="variable">developer</span> = {' },
   { plain: '  name: "Viren Modi",', html: '  name: <span class="string">"Viren Modi"</span>,' },
-  { plain: '  role: "Sr. PHP Laravel & CI Developer",', html: '  role: <span class="string">"Sr. PHP Laravel &amp; CI Developer"</span>,' },
+  { plain: '  role: "Sr. Laravel / PHP Backend Dev",', html: '  role: <span class="string">"Sr. Laravel / PHP Backend Dev"</span>,' },
   { plain: '  company: "360 Degree Technosoft",', html: '  company: <span class="string">"360 Degree Technosoft"</span>,' },
-  { plain: '  experience: "7+ years",', html: '  experience: <span class="string">"7+ years"</span>,' },
-  { plain: '  skills: ["Laravel", "CodeIgniter", "PHP"],', html: '  skills: [<span class="string">"Laravel"</span>, <span class="string">"CodeIgniter"</span>, <span class="string">"PHP"</span>],' },
+  { plain: '  experience: "8+ years",', html: '  experience: <span class="string">"8+ years"</span>,' },
+  { plain: '  skills: ["Laravel", "PHP", "REST APIs"],', html: '  skills: [<span class="string">"Laravel"</span>, <span class="string">"PHP"</span>, <span class="string">"REST APIs"</span>],' },
+  { plain: '  aiTools: ["Claude Code", "Cursor"],', html: '  aiTools: [<span class="string">"Claude Code"</span>, <span class="string">"Cursor"</span>],' },
   { plain: '  location: "Ahmedabad, India",', html: '  location: <span class="string">"Ahmedabad, India"</span>,' },
   { plain: '  available: true', html: '  available: <span class="keyword">true</span>' },
   { plain: '};', html: '};' },
